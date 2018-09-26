@@ -2,9 +2,9 @@
 #define PAPERTRAY
 
 typedef struct {
-    int name = 1;
+    int name;
     int quantity;
-    int total = 1000;
+    int total;
 
 } PaperTray;
 

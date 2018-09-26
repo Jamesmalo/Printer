@@ -6,14 +6,14 @@
 
 //Define the printer
 struct Printer{
-  char name[32];
-  int trays[6];
+  char* name[32];
+  int* trays[6];
   int userDB;
   int totalPagesPrinted;
 
 };
 
-int trayStatus(){
+int trayStatus(tray*,printer*){
   
   return 0;
 }
@@ -37,7 +37,7 @@ int main(){
   //make copyJobs
 
 
-  //make trays
+  //make trays (6 trays)
 
 
   //make printer
