@@ -6,23 +6,23 @@
 
 //Define the printer
 struct Printer{
-  char* name[32];
-  int* trays[6];
+  char *name[32];
+  int *trays[6];
   int userDB;
   int totalPagesPrinted;
 
 };
 
-int trayStatus(&T1,&trays){
+int trayStatus(trays,name){
   
   return 0;
 }
 
-int reloadTray(&trays,){
+int reloadTray(name,){
   return 1;
 }
 
-int printerStatus(&name){
+int printerStatus(){
   for(int i=0;i<6;i++){ 
     let total = total + PaperTray[i].quantity;
   }
