@@ -1,24 +1,32 @@
 //Include standard files and other header files (aka h files to your other files).
 #include <stdlib.h>
 #include <stdio.h>
+#include <paperTray.h>
+#include <stdio.h>
 
 
 
 //Define the printer
 struct Printer{
-  char *name[32];
-  int *trays[6];
-  int userDB;
+  char name[32];
+  int trays[6];
+  int* userDB[3];
   int totalPagesPrinted;
 
 };
 
-int trayStatus(trays,name){
+int trayStatus(Printer* pPrinter,int traynum){
   
-  return 0;
+  return *pPrinter.trays[traynum-1].quantity;
 }
 
-int reloadTray(name,){
+int reloadTray(Printer *pPrinter,int traynum){
+  if(trays.total == 2000){
+    trays.quantity = 2000;
+  }
+  else{
+    trays.quantity = 1000;
+  }
   return 1;
 }
 
@@ -42,7 +50,7 @@ int main(){
   User u3= {"three",2};
 
   //make copyJobs
-
+  CopyJob1 = {test1,1,,James Malo}
 
   //make trays (6 trays)
   PaperTray T1  = {1,2000,2000};
