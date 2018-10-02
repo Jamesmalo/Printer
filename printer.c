@@ -2,44 +2,48 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <paperTray.h>
-#include <stdio.h>
-
+#include <copyjob.h>
+#include <user.h>
 
 
 //Define the printer
 struct Printer{
   char name[32];
   int trays[6];
-  int* userDB[3];
+  int *userDB[3];
   int totalPagesPrinted;
 
 };
 
-int trayStatus(Printer* pPrinter,int traynum){
+int trayStatus(Printer *pPrinter,int traynum){
   
   return *pPrinter.trays[traynum-1].quantity;
 }
 
 int reloadTray(Printer *pPrinter,int traynum){
-  if(trays.total == 2000){
-    trays.quantity = 2000;
+  if(*pPrinter.trays.total == 2000){
+    *pPrinter.trays.quantity = 2000;
   }
   else{
-    trays.quantity = 1000;
+    *pPrinter.trays.quantity = 1000;
   }
   return 1;
 }
 
 int printerStatus(){
   for(int i=0;i<6;i++){ 
-    let total = total + PaperTray[i].quantity;
+    
   }
-  return total;
   return 0;
 
 }
 
-int print(){
+int print(Printer *pPrinter,*user,*copyJob){
+  User.pageCount = User.pageCount + copyJob.pages;
+  totalPagesPrinted = totalPagesPrinted + copyJob.pages;
+  if(){ //make sure tray has enough paper to print or moves on to next tray
+
+  }
   return 1;
 }
 
