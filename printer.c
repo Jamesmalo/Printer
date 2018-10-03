@@ -15,35 +15,33 @@ struct Printer{
 
 };
 
-int trayStatus(Printer *pPrinter,int traynum){
-  
-  return *pPrinter.trays[traynum-1].quantity;
+int trayStatus(Printer *p,int traynum){
+  return *p.trays[traynum-1].quantity;
 }
 
-int reloadTray(Printer *pPrinter,int traynum){
-  if(*pPrinter.trays.total == 2000){
-    *pPrinter.trays.quantity = 2000;
+int reloadTray(Printer *p,int traynum){
+  if(*p.trays[traynum-1].total == 2000){
+    *p.trays[traynum-1].quantity = 2000;
   }
   else{
-    *pPrinter.trays.quantity = 1000;
+    *p.trays[traynum-1].quantity = 1000;
   }
   return 1;
 }
 
-int printerStatus(){
+int printerStatus(Printer *p){
   for(int i=0;i<6;i++){ 
-    
+    int total = total + *p.trays[i].quantity;
   }
-  return 0;
+  return total;
 
 }
 
-int print(Printer *pPrinter,*user,*copyJob){
-  User.pageCount = User.pageCount + copyJob.pages;
-  totalPagesPrinted = totalPagesPrinted + copyJob.pages;
-  if(){ //make sure tray has enough paper to print or moves on to next tray
+int print(Printer *p,User *u,CopyJob *cj){
+  *u.pageCount = *u.pageCount + *cj.pages;
+  *p.totalPagesPrinted = *p.totalPagesPrinted + *cj.pages;
 
-  }
+
   return 1;
 }
 
