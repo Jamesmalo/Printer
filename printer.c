@@ -17,6 +17,9 @@ struct Printer{
 
 int trayStatus(Printer *p,int traynum){
   return *p.trays[traynum-1].quantity;
+
+  //PaperTray current = *(pPrinter.trays[traynum-1]);
+  //retrun *(current.quantity);
 }
 
 int reloadTray(Printer *p,int traynum){
