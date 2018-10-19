@@ -2,11 +2,11 @@
 #define COPYJOB
 
 //Define a user
-typedef struct{
+struct CopyJob{
     char name[40];
     int pages;
     int quantity;
     char content[512];
-} CopyJob;
+};
 
 #endif //COPYJOB

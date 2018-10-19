@@ -2,9 +2,9 @@
 #define USER
 
 //Define a user
-typedef struct{
+struct User{
     char name[20];
     long pageCount;
-} User;
+};
 
 #endif //USER

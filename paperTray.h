@@ -1,11 +1,11 @@
 #ifndef PAPERTRAY
 #define PAPERTRAY
 
-typedef struct {
+struct PaperTray{
     int name;
     int quantity;
     int total;
 
-} PaperTray;
+};
 
 #endif //PAPERTRAY
